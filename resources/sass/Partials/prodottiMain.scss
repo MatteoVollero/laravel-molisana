@@ -1,0 +1,16 @@
+.main{
+  position: relative;
+}
+
+.sfondo{
+  width: 99vw;
+  margin: auto;
+}
+
+.container{
+  position: absolute;
+  width: 100%;
+  height: calc(1096px/3 - 10px);
+  margin-top: 10px;
+  background-color: green;
+}

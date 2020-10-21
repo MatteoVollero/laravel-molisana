@@ -37,6 +37,19 @@ Route::get('/prodotti', function () {
 
 }) -> name('prodotti');
 
+Route::get('/prodotti/show/{id}', function ($id) {
+
+  if(config("pasta.$id") == null){
+    abort(404);
+  }
+
+   $prodotto = config("pasta.$id");
+
+  return view('prodottoSingolo',["data" => $prodotto]);
+
+}) -> where('id','[0-11]+') -> name("dettaglioProdotto");
+
+
 Route::get('/news', function () {
     return view('news');
 }) -> name('news');

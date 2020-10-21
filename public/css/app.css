@@ -42,11 +42,32 @@ header {
   margin: auto;
 }
 
-.container {
+.absolute-container {
+  width: 100%;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
   width: 100%;
   height: calc(1096px/3 - 10px);
   margin-top: 10px;
   background-color: green;
+}
+
+.flex-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex-list li {
+  width: calc((100% / 3) - 10px);
+  height: calc((100% / 2) - 10px);
+  margin: 5px;
 }
 

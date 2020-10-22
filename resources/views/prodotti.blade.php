@@ -7,36 +7,39 @@
 
 @section('mainContent')
 
-{{-- <div class="main">
-prototipo da finire
+<div class="main">
+
   <img class="sfondo" src="{{asset("images/sfondo.jpg")}}" alt="">
 
   <div class="absolute-container">
     <div class="container">
 
+      <h1>Lunga</h1>
+
       <ul class="flex-list">
 
-        <li>ciao</li>
-        <li>ciao</li>
-        <li>ciao</li>
-        <li>cuai</li>
+        @foreach ($paste["lunga"] as $item)
+
+            <li>
+
+              <div class="hover">
+                <a href="{{route("dettaglioProdotto",$item["id"])}}"></a>
+                 <h3>{{$item["titolo"]}}</h3> 
+                <img src="{{$item["src"]}}" alt="">
+              </div>
+
+            </li>
+
+        @endforeach
 
       </ul>
 
     </div>
-
-    <div class="container">
-
-    </div>
-
-    <div class="container">
-
-    </div>
   </div>
-</div> --}}
+</div>
 
 
-<h1>Lunga</h1>
+{{-- <h1>Lunga</h1>
   @if (!empty($paste["lunga"]))
     <ul class="flex-rules">
       @foreach ($paste["lunga"] as $item)
@@ -97,7 +100,7 @@ prototipo da finire
     </div>
 
   </div>
-</div>
+</div> --}}
 
 
 @endsection
